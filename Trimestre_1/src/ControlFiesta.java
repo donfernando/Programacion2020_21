@@ -10,7 +10,7 @@ public class ControlFiesta {
 	public static void main(String args[]) {
 		Scanner in = new Scanner(System.in);
 		boolean acompañado;
-		double edad;
+		int edad;
 		boolean tienecarnet;
 		System.out.print("Tiene Carnet del Club: ");
 		tienecarnet = in.nextBoolean();
