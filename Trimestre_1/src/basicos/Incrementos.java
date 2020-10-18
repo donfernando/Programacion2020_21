@@ -1,3 +1,4 @@
+package basicos;
 
 public class Incrementos {
 
@@ -6,15 +7,7 @@ public class Incrementos {
 		
 		System.out.println("x = "+x);
 		System.out.println("x = "+((x++)+x));
-		
-		
-		
-		
-		
-		
+
 		System.out.println("x = "+x);
-
-		
 	}
-
 }

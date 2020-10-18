@@ -1,3 +1,4 @@
+package basicos;
 import java.util.Scanner;
 
 public class Ejemplo_printf {

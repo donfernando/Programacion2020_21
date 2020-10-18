@@ -1,3 +1,4 @@
+package basicos;
 
 public class LeyDeMorgan {
 	public static void main(String[] args) {

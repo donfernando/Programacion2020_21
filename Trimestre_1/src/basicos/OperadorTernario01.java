@@ -1,3 +1,4 @@
+package basicos;
 
 public class OperadorTernario01 {
 	public static void main(String[] args) {
