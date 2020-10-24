@@ -1,3 +1,4 @@
+package ejerciciosCorregidos;
 import java.util.Scanner;
 public class OcultaConsonantes {
 	public static void main(String[] args) {

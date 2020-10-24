@@ -1,3 +1,4 @@
+package ejerciciosCorregidos;
 import java.util.*;
 
 public class ComparaNombres {
