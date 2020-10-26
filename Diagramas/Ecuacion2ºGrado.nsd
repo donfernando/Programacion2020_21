@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root xmlns:nsd="http://structorizer.fisch.lu/" text="&#34;Ecuacion2ºGrado&#34;" comment="" color="ffffff" type="program" style="nice">
+	<children>
+		<instruction text="&#34;int A&#34;" comment="&#34;&#34;" color="ffffff" rotated="0"></instruction>
+		<instruction text="&#34;int B&#34;" comment="&#34;&#34;" color="ffffff" rotated="0"></instruction>
+		<instruction text="&#34;int C&#34;" comment="&#34;&#34;" color="ffffff" rotated="0"></instruction>
+		<instruction text="&#34;Estas serán las soluciones &#34;" comment="" color="ffffff" rotated="0"></instruction>
+		<alternative text="&#34;A!=0&#34;" comment="" color="ffffff">
+			<qTrue>
+				<instruction text="&#34;bajoLaRaiz &#60;- B*B-4*A*C&#34;" comment="" color="ffffff" rotated="0"></instruction>
+				<alternative text="&#34;bajoLaRaiz &#60; 0&#34;" comment="" color="ffffff">
+					<qTrue>
+						<instruction text="&#34;output &#34;&#34;la solución precisa de números complejos&#34;&#34;&#34;" comment="" color="ffffff" rotated="0"></instruction>
+					</qTrue>
+					<qFalse>
+						<alternative text="&#34;bajoLaRaiz = 0&#34;" comment="&#34;&#34;" color="ffffff">
+							<qTrue>
+								<instruction text="&#34;x &#60;- (-B)/(2*A) &#34;" comment="" color="ffffff" rotated="0"></instruction>
+							</qTrue>
+							<qFalse>
+								<instruction text="&#34;x1 &#60;- (-B +sqrt(B*B-4*A*C))/(2*A)&#34;,&#34;x2 &#60;- (-B -sqrt(B*B-4*A*C))/(2*A)&#34;" comment="" color="ffffff" rotated="0"></instruction>
+							</qFalse>
+						</alternative>
+					</qFalse>
+				</alternative>
+			</qTrue>
+			<qFalse>
+				<alternative text="&#34;B!=0&#34;" comment="" color="ffffff">
+					<qTrue>
+						<instruction text="&#34;X &#60;- -C/B&#34;" comment="" color="ffffff" rotated="0"></instruction>
+					</qTrue>
+					<qFalse>
+						<alternative text="&#34;C!=0&#34;" comment="" color="ffffff">
+							<qTrue>
+								<instruction text="&#34;NO HAY SOLUCIONES&#34;" comment="" color="ffffff" rotated="0"></instruction>
+							</qTrue>
+							<qFalse>
+								<instruction text="&#34;INFINAS SOLUCIONES&#34;" comment="" color="ffffff" rotated="0"></instruction>
+							</qFalse>
+						</alternative>
+					</qFalse>
+				</alternative>
+			</qFalse>
+		</alternative>
+	</children>
+</root>
