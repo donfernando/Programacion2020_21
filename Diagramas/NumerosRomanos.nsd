@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root xmlns:nsd="http://structorizer.fisch.lu/" text="&#34;NumerosRomanos&#34;" comment="&#34;&#34;" color="ffffff" type="program" style="nice">
+	<children>
+		<instruction text="&#34;Leer de la entrada estandar &#34;,&#34;un numero entre 1 y 99&#34;" comment="" color="ffffff" rotated="0"></instruction>
+		<instruction text="&#34;INPUT numero&#34;" comment="" color="ffffff" rotated="0"></instruction>
+		<instruction text="&#34;dec &#60;- numero / 10        // DIV&#34;,&#34;unid &#60;- numero % 10     // MOD&#34;" comment="" color="ffffff" rotated="0"></instruction>
+		<case text="&#34;dec&#34;,&#34;1&#34;,&#34;2&#34;,&#34;3&#34;,&#34;4&#34;,&#34;...&#34;" comment="" color="ffffff">
+			<qCase>
+				<instruction text="&#34;OUTPUT 'X'&#34;" comment="" color="ffffff" rotated="0"></instruction>
+			</qCase>
+			<qCase>
+				<instruction text="&#34;OUTPUT 'XX'&#34;" comment="" color="ffffff" rotated="0"></instruction>
+			</qCase>
+			<qCase>
+				<instruction text="&#34;OUTPUT 'XXX'&#34;" comment="" color="ffffff" rotated="0"></instruction>
+			</qCase>
+			<qCase>
+				<instruction text="&#34;OUTPUT 'XL'&#34;" comment="" color="ffffff" rotated="0"></instruction>
+			</qCase>
+			<qCase>
+			</qCase>
+		</case>
+		<alternative text="&#34;unid = 1&#34;" comment="" color="ffffff">
+			<qTrue>
+				<instruction text="&#34;OUTPUT 'I'&#34;" comment="" color="ffffff" rotated="0"></instruction>
+			</qTrue>
+			<qFalse>
+				<alternative text="&#34;unid = 2&#34;" comment="" color="ffffff">
+					<qTrue>
+						<instruction text="&#34;OUTPUT 'II'&#34;" comment="" color="ffffff" rotated="0"></instruction>
+					</qTrue>
+					<qFalse>
+						<alternative text="&#34;unid = 3&#34;" comment="" color="ffffff">
+							<qTrue>
+								<instruction text="&#34;OUTPUT 'III'&#34;" comment="" color="ffffff" rotated="0"></instruction>
+							</qTrue>
+							<qFalse>
+								<alternative text="&#34;unid = 4&#34;" comment="" color="ffffff">
+									<qTrue>
+										<instruction text="&#34;OUTPUT 'IV'&#34;" comment="" color="ffffff" rotated="0"></instruction>
+									</qTrue>
+									<qFalse>
+										<alternative text="&#34;unid = ...&#34;" comment="" color="ffffff">
+											<qTrue>
+												<instruction text="&#34;OUTPUT '....'&#34;" comment="" color="ffffff" rotated="0"></instruction>
+											</qTrue>
+											<qFalse>
+											</qFalse>
+										</alternative>
+									</qFalse>
+								</alternative>
+							</qFalse>
+						</alternative>
+					</qFalse>
+				</alternative>
+			</qFalse>
+		</alternative>
+	</children>
+</root>

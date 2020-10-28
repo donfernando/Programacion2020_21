@@ -1,3 +1,4 @@
+package basicos;
 import java.util.Scanner;
 
 public class SepararDigitos {
@@ -7,7 +8,7 @@ public class SepararDigitos {
 		int num;
 		int dec,unid;
 		
-		System.out.print("Numero: ");
+		System.out.print("Número: ");
 		num = in.nextInt();
 		dec = num / 10;
 		unid = num % 10;

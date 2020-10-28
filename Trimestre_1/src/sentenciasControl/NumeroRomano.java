@@ -1,3 +1,4 @@
+package sentenciasControl;
 import java.util.Scanner;
 
 public class NumeroRomano {
@@ -6,14 +7,12 @@ public class NumeroRomano {
 		Scanner in = new Scanner(System.in);
 		int num;
 		int dec,unid;
-
 		
 		System.out.print("Número (1-99: ");
 		num = in.nextInt();
 		dec = num / 10;
 		unid = num % 10;
 
-		
 		switch (dec) {
 		case 3:
 			System.out.print('X');
@@ -37,10 +36,7 @@ public class NumeroRomano {
 			System.out.print('X');
 			break;
 		case 8:	
-			System.out.print('L');
-			System.out.print('X');
-			System.out.print('X');
-			System.out.print('X');
+			System.out.print("LXXX");
 			break;
 		case 9:
 			System.out.print('X');
