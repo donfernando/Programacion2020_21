@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root xmlns:nsd="http://structorizer.fisch.lu/" text="&#34;TotalizarMenoresQueElTope&#34;" comment="&#34;&#34;" color="ffffff" type="program" style="nice">
+	<children>
+		<instruction text="&#34;tabla &#60;- crear tabla de 10 enteros&#34;" comment="" color="ffffff" rotated="0"></instruction>
+		<instruction text="&#34;total &#60;- 0&#34;" comment="" color="ffffff" rotated="0"></instruction>
+		<while text="&#34;Para i de 0 hasta 9&#34;" comment="&#34;leer por consola los diez números y colocarlos en las casillas de la tabla&#34;" color="ffffff">
+			<qWhile>
+				<instruction text="&#34;tabla[i] &#60;- num. leido de consola&#34;" comment="" color="ffffff" rotated="0"></instruction>
+			</qWhile>
+		</while>
+		<instruction text="&#34;leer Tope&#34;" comment="" color="ffffff" rotated="0"></instruction>
+		<while text="&#34;Para i de 0 hasta 9&#34;" comment="" color="ffffff">
+			<qWhile>
+				<alternative text="&#34;tabla[i] &#60;= Tope&#34;" comment="" color="ffffff">
+					<qTrue>
+						<instruction text="&#34;total &#60;- total + tabla[i]&#34;" comment="" color="ffffff" rotated="0"></instruction>
+					</qTrue>
+					<qFalse>
+					</qFalse>
+				</alternative>
+			</qWhile>
+		</while>
+		<instruction text="&#34;Mostrar &#34;&#34;El total es: &#34;&#34;, total&#34;" comment="" color="ffffff" rotated="0"></instruction>
+	</children>
+</root>
