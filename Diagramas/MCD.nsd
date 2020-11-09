@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root xmlns:nsd="http://structorizer.fisch.lu/" text="&#34;MCD(A,B)&#34;" comment="&#34;&#34;" color="ffffff" type="program" style="nice">
+	<children>
+		<instruction text="&#34;dividendo &#60;- A&#34;,&#34;divisor &#60;- B&#34;" comment="&#34;&#34;" color="ffffff" rotated="0"></instruction>
+		<alternative text="&#34;divisor = 0&#34;" comment="&#34;&#34;" color="ffffff">
+			<qTrue>
+				<instruction text="&#34;MCD(A,B) es dividendo&#34;" comment="&#34;&#34;" color="ffffff" rotated="0"></instruction>
+			</qTrue>
+			<qFalse>
+				<instruction text="&#34;resto &#60;- dividendo % divisor&#34;" comment="&#34;&#34;" color="ffffff" rotated="0"></instruction>
+				<while text="&#34;resto != 0&#34;" comment="&#34;&#34;" color="ffffff">
+					<qWhile>
+						<instruction text="&#34;dividendo &#60;- divisor&#34;,&#34;divisor &#60;- resto&#34;" comment="&#34;&#34;" color="ffffff" rotated="0"></instruction>
+						<instruction text="&#34;resto &#60;- dividendo % divisor&#34;" comment="" color="ffffff" rotated="0"></instruction>
+					</qWhile>
+				</while>
+				<instruction text="&#34;MCD(A,B) es divisor&#34;" comment="&#34;&#34;" color="ffffff" rotated="0"></instruction>
+			</qFalse>
+		</alternative>
+	</children>
+</root>

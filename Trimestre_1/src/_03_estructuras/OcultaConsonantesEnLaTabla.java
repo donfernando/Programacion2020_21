@@ -1,5 +1,7 @@
 package _03_estructuras;
+
 import java.util.Scanner;
+
 public class OcultaConsonantesEnLaTabla {
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
@@ -7,19 +9,19 @@ public class OcultaConsonantesEnLaTabla {
 		char[] fraseTabla;
 		int pos;
 		char ch;
-		
+
 		System.out.println("Introduzca frase...");
-		frase=in.nextLine();
-		fraseTabla=frase.toCharArray();
+		frase = in.nextLine();
+		fraseTabla = frase.toCharArray();
 
 		for (pos = 0; pos < frase.length(); pos++) {
-			ch = fraseTabla[pos];
-			if(Character.isLetter(ch) &
-			   ch!='a'& ch!='e'& ch!='i'& ch!='o'& ch!='u')
-				fraseTabla[pos]='*';
+			ch = Character.toLowerCase(fraseTabla[pos]);
+			// ch = Character.toLowerCase(ch);
+			if (Character.isLetter(ch) & ch != 'a' & ch != 'e' & ch != 'i' & ch != 'o' & ch != 'u')
+				fraseTabla[pos] = '*';
 		}
 
-		frResult=new String(fraseTabla);
+		frResult = new String(fraseTabla);
 		System.out.println(frResult);
 		in.close();
 	}
