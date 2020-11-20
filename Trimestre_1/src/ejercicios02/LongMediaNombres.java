@@ -16,7 +16,7 @@ public class LongMediaNombres {
 		while(!name.equals("FIN")) {
 			res += name.length();
 			contName++;
-			name = in.nextLine();
+			name = in.next();
 		}
 		if(contName!=0)
 			System.out.printf("La media es: %.2f", res / contName);

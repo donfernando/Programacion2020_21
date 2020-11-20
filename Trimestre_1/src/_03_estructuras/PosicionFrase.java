@@ -1,3 +1,5 @@
+package _03_estructuras;
+
 import java.util.Scanner;
 
 public class PosicionFrase {

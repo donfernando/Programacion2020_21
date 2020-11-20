@@ -5,22 +5,23 @@ import java.util.Scanner;
 public class MCD_v2 {
 	public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        int a,b,res;
-        int num1, num2;
+        int dividendo,divisor,aux;
+
 
         System.out.println("Ingrese el primer número");
-        num1 = in.nextInt();
+        dividendo = in.nextInt();
         System.out.println("Ingrese el segundo número");
-        num2 = in.nextInt();
+        divisor = in.nextInt();
 
-        a = num1;
-        b = num2;
-        while (b != 0){
-            res = b;
-            b = a%b;
-            a = res;
+
+        
+        System.out.print("El M.C.D. entre " + dividendo + " y " + divisor + " es ");
+        while (divisor != 0){
+            aux = divisor;
+            divisor = dividendo%divisor;
+            dividendo = aux;
         }
-        System.out.println("El M.C.D. entre " + num1 + " y " + num2 + " es " +  a);
+        System.out.println(dividendo);
 	}
 
 }
