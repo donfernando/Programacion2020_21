@@ -9,10 +9,10 @@ public class TablaCalificaciones {
 		final int ANCHO_COL2=8;
 		String[] trimestres = { "Primero", "Segundo", "Tercero" };
 		String[] nombremodulo = { "Sistemas", "Programación", "Ent. Trabajo", "FOL" };
-		float[][] calificaciones = { { 0, 1,  2 },
-								     { 2,10,  3 },
-								     { 6, 7,  3 },
-				  				     { 8, 2, 10 } };
+		float[][] calificaciones = { { 0,    1,  2 },
+								     { 2.5f,10,  3 },
+								     { 6,    7,  3 },
+				  				     { 8,    2, 10 } };
 		int iModulo;
 		int iTrimestre;
 
