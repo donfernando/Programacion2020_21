@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Ejercicio01 {
 
 	public static void main(String[] args) {
-		float[] numeros = new float[4];
+		float[] numeros = new float[10];
 		float minimo, suma, aux;
 
 		int iz, de;

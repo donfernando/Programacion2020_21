@@ -15,6 +15,7 @@ public class Ejercicio03 {
 							   {2,1}};
 		
 		for (i = 0; i < coordenadas.length; i++) {
+			//System.out.print(letras[coordenadas[i][0]][coordenadas[i][1]]);
 			f=coordenadas[i][0];
 			c=coordenadas[i][1];
 			System.out.print(letras[f][c]);
