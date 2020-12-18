@@ -45,4 +45,41 @@ public class FuncionesNumeros {
 		return resultado;
 	}
 
+	public static boolean esTrianguloValido(float l1, float l2, float l3) {
+		boolean valido;
+		if (l1 > l2 && l1 > l3) {
+			valido = l1<l2+l3;
+		} else {
+			if (l2 > l3) {
+				valido = l2<l1+l3;
+			} else {
+				valido = l3<l1+l2;
+			}
+		}
+		return valido;
+	}	
+	
+	public static int numeroAleatorio(int d, int h) {
+
+		double x = Math.random();
+		int valoresRango   = ((h - d) + 1);
+		int resultado2 = (int) (x * valoresRango) + d;
+		return resultado2;
+
+	}
+
+	public static float totalSobreTope(float[] numeros, float tope) {
+		float total=0;
+		int i;
+		
+		for (i = 0; i < numeros.length; i++) {
+			if(numeros[i]>tope)
+				total = total + numeros[i];
+		}
+		return total;
+	}
+
+
+	
+	
 }

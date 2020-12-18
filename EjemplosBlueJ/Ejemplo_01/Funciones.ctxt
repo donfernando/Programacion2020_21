@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=dni
+comment0.target=char\ letraDNI(long)
+comment1.params=dni
+comment1.target=char\ letraDNI(java.lang.String)
+comment2.params=dni
+comment2.target=boolean\ validarDNI(java.lang.String)
+numComments=3

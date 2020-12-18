@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class PruebaFunciones {
+public class PruebaFunc_01 {
 	public static void main(String[] args) {		
 		Scanner in = new Scanner(System.in);
 
@@ -23,9 +23,11 @@ public class PruebaFunciones {
 		// *********************************
 		// ** Probando la funcion media(...)
 		float[] t = { 2, 2, 2 };
+		int[] datos;
 		System.out.println(FuncionesNumeros.media( t ) );
 		System.out.println(FuncionesNumeros.media( new float[] { 2.5f, 2, 2 } ) );
 		System.out.println(FuncionesNumeros.media( new int[] { 2, 12, 232 } ) );
+				
 		
 		
 		// *************************************
