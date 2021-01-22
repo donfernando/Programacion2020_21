@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=Coordenada
+comment1.params=
+comment1.target=Coordenada[]\ generaPuntos()
+comment2.params=q
+comment2.target=Coordenada\ suma(Coordenada)
+comment3.params=q
+comment3.target=Coordenada\ resta(Coordenada)
+comment4.params=
+comment4.target=float\ distancia()
+comment5.params=o
+comment5.target=float\ distancia(Coordenada)
+comment6.params=
+comment6.target=java.lang.String\ toString()
+numComments=7

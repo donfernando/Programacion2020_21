@@ -73,8 +73,7 @@ public class FuncionesVarias {
 	public static void println(DocumentoDNI doc) {
 		System.out.println("-----------------------");
 		System.out.println("Nombre: "+doc.nombre);
-		//System.out.println("DNI: "+doc.dni+doc.ldni);
-		System.out.println("DNI: "+doc.getDNI());
+		System.out.println("DNI: "+doc.dni+doc.ldni);
 		System.out.println("Edad: "+doc.edad);
 	}
 	public static void println(DocumentoDNI[] t) {

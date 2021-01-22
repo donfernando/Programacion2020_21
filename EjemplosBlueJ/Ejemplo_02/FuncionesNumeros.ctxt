@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=FuncionesNumeros
+comment1.params=num
+comment1.target=java.lang.String\ numRomanos(int)
+comment2.params=tabla
+comment2.target=float\ media(int[])
+comment3.params=tabla
+comment3.target=float\ media(float[])
+comment4.params=personas
+comment4.target=float\ edadMedia(DocumentoDNI[])
+comment5.params=num
+comment5.target=boolean\ esTriangular(int)
+comment6.params=l1\ l2\ l3
+comment6.target=boolean\ esTrianguloValido(float,\ float,\ float)
+comment7.params=d\ h
+comment7.target=int\ numeroAleatorio(int,\ int)
+comment8.params=numeros\ tope
+comment8.target=float\ totalSobreTope(float[],\ float)
+comment9.params=nums
+comment9.target=float[]\ incrementos(float[])
+numComments=10
