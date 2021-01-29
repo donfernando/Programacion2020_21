@@ -23,5 +23,4 @@ public class MCD_v2 {
         }
         System.out.println(dividendo);
 	}
-
 }

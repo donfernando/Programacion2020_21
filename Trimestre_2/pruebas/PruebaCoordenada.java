@@ -2,13 +2,12 @@
 public class PruebaCoordenada {
 
 	public static void main(String[] args) {
-		Coordenada[] datos= {new Coordenada(),new Coordenada(),new Coordenada()};
-		datos[0].x=5;
-		datos[0].y=8;
-		datos[1].x=15;
-		datos[1].y=15;
-		datos[2].x=1;
-		datos[2].y=5;
+		
+		Coordenada p = new Coordenada();
+		System.out.println(p);
+		System.out.println();
+		
+		Coordenada[] datos= {new Coordenada(5,8),new Coordenada(15,15),new Coordenada()};
 		for (int i = 0; i < datos.length; i++) {
 			System.out.println(datos[i]);
 		}

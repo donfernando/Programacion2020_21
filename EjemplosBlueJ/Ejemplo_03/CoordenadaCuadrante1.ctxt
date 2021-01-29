@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.target=CoordenadaCuadrante1
+comment1.params=
+comment1.target=float\ getX()
+comment10.params=
+comment10.target=java.lang.String\ toString()
+comment2.params=x
+comment2.target=void\ setX(float)
+comment3.params=
+comment3.target=float\ getY()
+comment4.params=y1
+comment4.target=void\ setY(float)
+comment5.params=puntos
+comment5.target=CoordenadaCuadrante1\ masCerca(CoordenadaCuadrante1[])
+comment6.params=q
+comment6.target=CoordenadaCuadrante1\ suma(CoordenadaCuadrante1)
+comment7.params=q
+comment7.target=CoordenadaCuadrante1\ resta(CoordenadaCuadrante1)
+comment8.params=
+comment8.target=float\ distancia()
+comment9.params=o
+comment9.target=float\ distancia(CoordenadaCuadrante1)
+numComments=11
