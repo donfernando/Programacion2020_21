@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=Botella2
+comment1.params=liq
+comment1.target=void\ setContenido(float)
+comment10.params=liq
+comment10.target=float\ extraer(float)
+comment11.params=
+comment11.target=java.lang.String\ toString()
+comment2.params=
+comment2.target=float\ getContenido()
+comment3.params=
+comment3.target=void\ cerrar()
+comment4.params=
+comment4.target=void\ abrir()
+comment5.params=
+comment5.target=boolean\ estaCerrada()
+comment6.params=
+comment6.target=boolean\ estaAbierta()
+comment7.params=
+comment7.target=boolean\ estaLlena()
+comment8.params=
+comment8.target=boolean\ estaVacia()
+comment9.params=liq
+comment9.target=float\ meter(float)
+numComments=12

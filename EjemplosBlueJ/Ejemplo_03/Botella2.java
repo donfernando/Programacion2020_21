@@ -1,8 +1,8 @@
 
-public class Botella {
+public class Botella2 {
     private float contenido;
-    private boolean cerrada; 
-    
+    private boolean cerrada;
+    public static String unidades="litros"; 
     public void setContenido(float liq) {
         if(liq >=0.0f && liq <= 1.0f  /* && !cerrada */)
             contenido = liq;
@@ -63,7 +63,7 @@ public class Botella {
     
     public String toString() {   
         //return "Botella["+contenido+" , "+(cerrada?"cerrada":"abierta")+"]";
-        return String.format("Botella[%.2f , %s]", contenido, (cerrada?"cerrada":"abierta"));
+        return String.format("Botella[%.2f %s, %s]", contenido, unidades, (cerrada?"cerrada":"abierta"));
 
     }
     

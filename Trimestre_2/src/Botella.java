@@ -2,7 +2,8 @@
 public class Botella {
 	private float contenido;
 	private boolean cerrada;
-
+	private static String unidades="litros";
+	
 	public Botella() {
 		contenido=0;
 		cerrada=false;
@@ -72,9 +73,17 @@ public class Botella {
 	}
 
 	public String toString() {
-		// return "Botella["+contenido+" , "+(cerrada?"cerrada":"abierta")+"]";
-		return String.format("Botella[%.2f , %s]", contenido, (cerrada ? "cerrada" : "abierta"));
+		// return "Botella["+contenido+" "+unidades+" , "+(cerrada?"cerrada":"abierta")+"]";
+		return String.format("Botella[%.2f %s, %s]", contenido, unidades, (cerrada ? "cerrada" : "abierta"));
 	}
+	
+	public static Caja caja(int tam) {
+		if(tam!=10 && tam!=12 && tam!=24)
+			throw new RuntimeException();
+		return new Caja(tam);
+	}
+	
+	
 }
 
 

@@ -27,10 +27,7 @@ public class Fraccion {
     }
 
     public static Fraccion producto(Fraccion a, Fraccion b) {
-        Fraccion c = new Fraccion();
-        c.num = a.num * b.num;
-        c.den = a.den * b.den;
-        return c;
+        return new Fraccion(a.num * b.num, a.den * b.den);
     }
 
     public Fraccion producto(Fraccion a) {
@@ -42,24 +39,24 @@ public class Fraccion {
     }
 
     public Fraccion suma(Fraccion f) {
-    	
+		return new Fraccion(f.den*num+f.num*den,den*f.den).simplificar();
     }
     public Fraccion inversa() {
-    	
+        return new Fraccion(den, num);
     }
     public Fraccion opuesta() {
-    	
+        return new Fraccion(-num, den);
     }
     
     
     
     public String toString() {
-        return "( " + num + "/" + den + " )";
+        return "(" + num + '/' + den + ')';
     }
 
-    private static int mcm(int a, int b){{
-    	
-    }
+	private static int mcm(int a, int b) {
+		return (a*b)/mcd(a,b);
+	}
 
     private static int mcd(int a, int b){
         if(b==0){
@@ -75,10 +72,7 @@ public class Fraccion {
     }
 
     public Fraccion simplificar(){
-        Fraccion c = new Fraccion();    	
-
-        c.num = num/mcd(num,den);
-        c.den = den/mcd(num,den);
-        return c;
+    	int mcd = mcd(num,den);
+    	return new Fraccion(num/mcd,den/mcd);    	
     }
 }
