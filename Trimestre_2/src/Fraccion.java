@@ -3,12 +3,16 @@ public class Fraccion {
     private int den;
 
     public Fraccion() {   	
+    	den=1;  
     }
     public Fraccion(int n) {
+    	this();
     	num=n;
-    	den=1;
+    	//den=1;
     }
     public Fraccion(int n, int d) {
+    	if(d==0)
+    		throw new RuntimeException("No se admite cero en el denominador.");
     	num=n;
     	den=d;
     }
@@ -17,6 +21,8 @@ public class Fraccion {
         this.num = num;
     }
     public void setDenominador(int den) {
+    	if(den==0)
+    		throw new RuntimeException("No se admite cero en el denominador.");
         this.den = den;
     }
     public int getNumerador() {
@@ -42,7 +48,11 @@ public class Fraccion {
 		return new Fraccion(f.den*num+f.num*den,den*f.den).simplificar();
     }
     public Fraccion inversa() {
-        return new Fraccion(den, num);
+		/*
+		 * if(num==0) throw new
+		 * RuntimeException("No se admite que el denominador acabe siendo cero.");
+		 */
+    	return new Fraccion(den, num);
     }
     public Fraccion opuesta() {
         return new Fraccion(-num, den);
