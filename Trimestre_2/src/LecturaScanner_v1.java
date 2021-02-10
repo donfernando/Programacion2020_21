@@ -20,5 +20,6 @@ public class LecturaScanner_v1 {
 		} catch (InputMismatchException e) {
 			System.out.println("Los datos introducidos no son válidos.");
 		}
-    }
+        in.close();
+	}
 }

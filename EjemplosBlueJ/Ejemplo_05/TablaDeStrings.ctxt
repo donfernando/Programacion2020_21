@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.target=TablaDeStrings
+comment1.params=
+comment1.target=TablaDeStrings()
+comment10.params=
+comment10.target=java.lang.String\ toString()
+comment2.params=tam
+comment2.target=TablaDeStrings(int)
+comment3.params=
+comment3.target=int\ size()
+comment4.params=s
+comment4.target=boolean\ add(java.lang.String)
+comment5.params=
+comment5.target=void\ crecer()
+comment6.params=pos\ s
+comment6.target=boolean\ add(int,\ java.lang.String)
+comment7.params=pos
+comment7.target=java.lang.String\ remove(int)
+comment8.params=pos
+comment8.target=java.lang.String\ get(int)
+comment9.params=pos\ dato
+comment9.target=void\ set(int,\ java.lang.String)
+numComments=11

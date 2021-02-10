@@ -32,5 +32,6 @@ public class LecturaScanner_v2 {
         	System.out.println("intentos gastados: "+intentos);
 */
         System.out.println("FIN");
+        in.close();
 	}
 }

@@ -9,6 +9,8 @@ public class Caja {
 			s=s+botellas[i]+'\n';
 		}
 		s=s+botellas[i];
+		
+		
 		return s;
 	}
 }
