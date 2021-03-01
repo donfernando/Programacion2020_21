@@ -1,4 +1,4 @@
-
+package minik.java;
 public class Caja {
 	private Botella[] botellas;
 	

@@ -1,11 +1,12 @@
+//import minik.java.Dado;
 
 public class PruebaDado {
 
 	public static void main(String[] args) {
-		Dado a,b;
+		minik.java.Dado a,b;
 		int tirada;
-		a = new Dado();
-		b = new Dado(2);
+		a = new minik.java.Dado();
+		b = new minik.java.Dado(2);
 		
 		tirada=a.lanzar();
 		System.out.println(tirada);
@@ -17,9 +18,9 @@ public class PruebaDado {
 		System.out.println(b.lanzar());
 		System.out.println(b.lanzar());
 		
-		// a = new Dado(1);
+		// a = new minik.java.Dado(1);
 		try {
-			a = new Dado(10);
+			a = new minik.java.Dado(10);
 			System.out.println("----->"+a.lanzar());
 		} catch(RuntimeException e) {
 			System.out.println("**Error");

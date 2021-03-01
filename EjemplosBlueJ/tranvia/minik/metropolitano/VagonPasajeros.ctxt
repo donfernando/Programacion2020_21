@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=VagonPasajeros
+comment1.params=capacidad
+comment1.target=VagonPasajeros(int)
+comment2.params=pasajero
+comment2.target=void\ subir(Pasajero)
+comment3.params=nombre
+comment3.target=Pasajero\ bajar(java.lang.String)
+numComments=4

@@ -11,7 +11,7 @@ public class LoteriaArgumento {
 			try {
 				numBolas = Integer.parseInt(args[0]);
 
-				minik.programacion.java.TablaDeStrings bombo = new minik.programacion.java.TablaDeStrings(numBolas);
+				minik.java.TablaDeStrings bombo = new minik.java.TablaDeStrings(numBolas);
 				//ArrayList<String> bombo = new ArrayList<String>(numBolas);
 				int posAzar;
 				for (int i = 1; i <= numBolas; i++) {

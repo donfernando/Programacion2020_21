@@ -1,5 +1,8 @@
+package ejecutables;
 import java.util.InputMismatchException;
 import java.util.Scanner;
+
+import minik.java.Botella;
 
 public class PruebaBotella {
 

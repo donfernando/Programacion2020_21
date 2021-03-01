@@ -1,3 +1,4 @@
+package minik.java;
 
 
 import java.util.InputMismatchException;

@@ -1,16 +1,19 @@
+package minik.java;
 
-
-public class TablaDeStrings_tamFijo {
+public class TablaDeStrings {
+	
 	private String[] datos;
 	private int size;
 	private int modCount;
+	public final static int TAM_INI=10;
+	public final static int TAM_CREC=10;
 
-	public TablaDeStrings_tamFijo() {
-		this(10);
+	public TablaDeStrings() {
+		this(TAM_INI);
 		// datos= new String[10];
 	}
 
-	public TablaDeStrings_tamFijo(int tam) {
+	public TablaDeStrings(int tam) {
 		datos = new String[tam];
 		// size=0;
 		// modCount=0;
@@ -21,34 +24,39 @@ public class TablaDeStrings_tamFijo {
 	}
 
 	public boolean add(String s) {
-		boolean cabe;
-		if (size < datos.length) {
-			cabe = true;
-			datos[size] = s;
-			size++;
-			modCount++;
-		} else
-			cabe = false;
-		return cabe;
+		if (size == datos.length)
+			crecer();
+		datos[size] = s;
+		size++;
+		modCount++;
+		return true;
+	}
+
+	private void crecer() {
+		String[] nueva;
+		int  i;
+		nueva = new String[datos.length+TAM_CREC];
+		for (i = 0; i < datos.length; i++) {
+			nueva[i]=datos[i];
+		}
+		datos=nueva;
 	}
 
 	public boolean add(int pos, String s) {
-		boolean cabe;
 		int i;
 		if (pos < 0 || pos > size)
 			throw new RuntimeException();
-		if (size < datos.length) {
-			cabe = true;
-			for (i = size; i > pos; i--) {
-				datos[i] = datos[i - 1];
-			}
-			datos[pos] = s;
-			size++;
-			modCount++;
-		} else
-			cabe = false;
-		return cabe;
+		if (size == datos.length)
+			crecer();
+		for (i = size; i > pos; i--) {
+			datos[i] = datos[i - 1];
+		}
+		datos[pos] = s;
+		size++;
+		modCount++;
+		return true;
 	}
+
 	public String remove(int pos) {
 		String aux;
 		int i;

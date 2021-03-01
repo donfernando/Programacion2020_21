@@ -1,3 +1,4 @@
+package minik.java;
 public class Fraccion {
     private int num;
     private int den;

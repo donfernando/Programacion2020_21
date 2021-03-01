@@ -1,3 +1,4 @@
+package minik.java;
 
 public class Coordenada {
 	private float x,y;

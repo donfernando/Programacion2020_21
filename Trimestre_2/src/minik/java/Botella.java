@@ -1,3 +1,4 @@
+package minik.java;
 
 public class Botella {
 	private float contenido;

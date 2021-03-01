@@ -1,3 +1,4 @@
+import minik.java.FuncionesVarias;
 
 public class PruebaFunc_02 {
 	public static void main(String[] args) {

@@ -1,3 +1,4 @@
+import minik.java.Coordenada;
 
 public class PruebaCoordenada {
 

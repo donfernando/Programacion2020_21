@@ -1,3 +1,4 @@
+import minik.java.Fraccion;
 
 public class PruebaFraccion {
     public static void main(String[] args) {

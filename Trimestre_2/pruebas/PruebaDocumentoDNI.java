@@ -1,3 +1,6 @@
+import minik.java.DocumentoDNI;
+import minik.java.FuncionesNumeros;
+import minik.java.FuncionesVarias;
 
 public class PruebaDocumentoDNI {
 	
