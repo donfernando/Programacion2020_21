@@ -1,9 +1,11 @@
 package minik.metropolitano;
 
+import java.util.Arrays;
+
 public class VagonPasajeros {
 
-    private Pasajero[] asientos;
-    private int asientosOcupados;
+    Pasajero[] asientos;
+    int asientosOcupados;
 
     VagonPasajeros(int capacidad) {
         if (capacidad < 1)
@@ -14,10 +16,13 @@ public class VagonPasajeros {
     public void subir(Pasajero pasajero) {
         if (pasajero == null)
             throw new RuntimeException("No se acepta pasajero null");
+        if(pasajero.estaDentro)
+            throw new RuntimeException("No se acepta pasajero que ya está subido al tranvía");       	
         if (asientosOcupados == asientos.length)
-            throw new RuntimeException("Vagón completo");
+            throw new ArrayStoreException("Vagón completo");
         asientos[asientosOcupados] = pasajero;
         asientosOcupados++;
+        pasajero.estaDentro=true;
     }
 
     public Pasajero bajar(String nombre) {
@@ -34,7 +39,26 @@ public class VagonPasajeros {
             asientos[i] = asientos[asientosOcupados - 1];
             asientos[asientosOcupados - 1] = null;
             asientosOcupados--;
-        }
+            p.estaDentro=false;
+        }        
         return p;
     }
+
+	@Override
+	public String toString() {
+		String s="[";
+		int i;
+		for (i = 0; i < asientosOcupados-1; i++) {
+			s += asientos[i].toString()+',';		
+		}
+		if(asientosOcupados!=0)
+			s += asientos[i].toString();
+		s += ']';
+		return s;
+	}
+    
+    
+    
+    
+    
 }

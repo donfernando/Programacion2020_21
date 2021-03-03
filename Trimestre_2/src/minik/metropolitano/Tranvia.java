@@ -1,5 +1,7 @@
 package minik.metropolitano;
 
+
+
 public class Tranvia {
 	private static final int NUM_VAGONES_DEF=4;
 	private static final int NUM_ASIENTOS_DEF=6;
@@ -33,7 +35,7 @@ public class Tranvia {
 			try {
 				vagones[pos].subir(p);
 				subido=true;
-			} catch (RuntimeException e) {
+			} catch (ArrayStoreException e) {
 				if (pos < vagones.length - 1)
 					pos++;
 				else
@@ -47,6 +49,23 @@ public class Tranvia {
 	public Pasajero bajar(String nombre, int vagon) {
         return vagones[vagon - 1].bajar(nombre);
     }
+
+	@Override
+	public String toString() {
+		String s = "Tranvia (";
+		int numPasajeros=0;
+		for (int i = 0; i < vagones.length; i++) {
+			numPasajeros+=vagones[i].asientosOcupados;
+		}
+		s += numPasajeros + " pasajeros)\n";
+		for (int i = 0; i < vagones.length; i++) {
+			s += (i+1)+":"+vagones[i].toString()+'\n';
+		}
+		return s;
+	}
+	
+	
+	
 }
 
 
