@@ -11,6 +11,8 @@ public class Tranvia {
 	}
 
 	public Tranvia(int numVagones) {
+		if(numVagones<1)
+			throw new RuntimeException("El tranvía necesita al menos un vagón");			
 		vagones = new ArrayList<VagonPasajeros>(numVagones);
 		for (int i = 0; i < numVagones; i++) {
 			vagones.add(new VagonPasajeros(3));
@@ -38,6 +40,8 @@ public class Tranvia {
 		if (vagones.size() <= vagon || vagon < 0) {
 			throw new RuntimeException("Ese vagon no existe");
 		}
+		if(p.subido)
+			throw new RuntimeException("El ya está subido...");			
 
 		for (i = vagon; i < vagones.size() && !subido; i++) {
 			try {
@@ -47,8 +51,8 @@ public class Tranvia {
 			}
 		}
 		if (!subido)
+			i=0;
 			do {
-			    i=0;
 				try {
 					vagones.get(i).subir(p);
 					subido = true;
@@ -58,6 +62,6 @@ public class Tranvia {
 			} while(i < vagon && !subido);
 		if (!subido)
 			throw new RuntimeException("No hay Asientos Libres");
-		return i + 1;
+		return i;
 	}
 }

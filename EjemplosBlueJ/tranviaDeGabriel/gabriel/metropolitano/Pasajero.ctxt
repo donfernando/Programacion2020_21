@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Pasajero
+comment1.params=nombre
+comment1.target=Pasajero(java.lang.String)
+comment2.params=
+comment2.target=java.lang.String\ getNombre()
+comment3.params=
+comment3.target=java.lang.String\ toString()
+numComments=4

@@ -16,9 +16,9 @@ public class VagonPasajeros {
 	public void subir(Pasajero pasajero) throws RuntimeException {
 		if (pasajero == null)
 			throw new RuntimeException("Falta el pasajero (no se admite null)");
-
 		if (asientos.size() < CAPACIDAD) {
 			asientos.add(pasajero);
+			pasajero.subido=true;
 		} else {
 			throw new RuntimeException("No hay asientos libres");
 		}
@@ -31,6 +31,7 @@ public class VagonPasajeros {
 			i++;
 		if (!asientos.get(i).getNombre().equals(nombre))
 			throw new RuntimeException("Ese pasajero nunca subio o no existe");
+		asientos.get(i).subido=false;
 		return asientos.remove(i);
 	}
 }

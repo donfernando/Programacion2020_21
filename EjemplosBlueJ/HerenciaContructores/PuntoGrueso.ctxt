@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=PuntoGrueso
+comment1.params=
+comment1.target=PuntoGrueso()
+comment2.params=
+comment2.target=void\ izq()
+comment3.params=
+comment3.target=void\ der()
+comment4.params=
+comment4.target=void\ arr()
+comment5.params=
+comment5.target=void\ abj()
+comment6.params=
+comment6.target=int\ getDiametro()
+comment7.params=d
+comment7.target=void\ setDiametro(int)
+numComments=8

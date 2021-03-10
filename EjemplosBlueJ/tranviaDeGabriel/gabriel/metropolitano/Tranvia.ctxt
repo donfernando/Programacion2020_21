@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Tranvia
+comment1.params=
+comment1.target=Tranvia()
+comment2.params=numVagones
+comment2.target=Tranvia(int)
+comment3.params=nombre\ vagon
+comment3.target=Pasajero\ bajar(java.lang.String,\ int)
+comment4.params=p\ vagon
+comment4.target=int\ subir(Pasajero,\ int)
+numComments=5

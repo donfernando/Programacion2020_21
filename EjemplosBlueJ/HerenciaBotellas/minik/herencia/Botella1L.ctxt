@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Botella1L
+comment1.params=
+comment1.target=Botella1L()
+comment2.params=liq
+comment2.target=Botella1L(float)
+comment3.params=
+comment3.target=java.lang.String\ toString()
+numComments=4

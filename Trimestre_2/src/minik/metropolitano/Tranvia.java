@@ -4,7 +4,7 @@ package minik.metropolitano;
 
 public class Tranvia {
 	private static final int NUM_VAGONES_DEF=4;
-	private static final int NUM_ASIENTOS_DEF=6;
+	private static final int NUM_ASIENTOS_DEF=2;
 	
 	private VagonPasajeros[] vagones;
 	
@@ -43,7 +43,7 @@ public class Tranvia {
 			} 
 		} while (!subido && pos!=vagon-1);
 		if(!subido)
-			throw new RuntimeException("No se puede subir. Todos los vagones están completos");
+			throw new RuntimeException("No se puede subir a "+p.getNombre()+". Todos los vagones están completos");
 		return pos+1;	
 	}
 	public Pasajero bajar(String nombre, int vagon) {
