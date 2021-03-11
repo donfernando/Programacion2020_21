@@ -47,6 +47,19 @@ public class PuntoAcotado {
 	}
 	
 	@Override
+	public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj instanceof PuntoAcotado) {
+            PuntoAcotado p = (PuntoAcotado)obj;
+            return x==p.x && y==p.y;
+        }
+        return false;
+	}
+	
+	
+	@Override
 	public String toString() {
 		return "("+x+','+y+')';
 	}

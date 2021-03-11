@@ -10,11 +10,11 @@ public class Prueba01 {
 		puntos[1]=new PuntoGrueso();
 		System.out.println(puntos[0]);
 		System.out.println(puntos[1]);
+		System.err.println(puntos[0].equals(puntos[1]));
 		puntos[0].der();
 		puntos[1].der();
 		System.out.println(puntos[0]);
 		System.out.println(puntos[1]);
-		
 		
 	}
 }

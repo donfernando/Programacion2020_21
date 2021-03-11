@@ -8,8 +8,14 @@ public class PuntoGrueso extends PuntoAcotado {
 	static int diametro = 5;
 
 	public void izq() {
-		if (esvalido(x - diametro, y))
+		
+		/*for (int i = 0; i < diametro; i++) {
+				super.izq();
+			}
+		*/
+		if (esvalido(x - diametro, y)){
 			x -= diametro;
+		}
 	}
 
 	public void der() {
