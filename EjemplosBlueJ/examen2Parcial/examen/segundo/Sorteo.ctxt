@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Sorteo
+comment1.params=lim
+comment1.target=Sorteo(int)
+comment2.params=limInf\ limSup
+comment2.target=Sorteo(int,\ int)
+comment3.params=num
+comment3.target=int\ intentar(int)
+comment4.params=
+comment4.target=java.lang.String\ toString()
+numComments=5

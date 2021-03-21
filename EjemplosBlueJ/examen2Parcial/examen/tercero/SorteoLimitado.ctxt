@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=SorteoLimitado
+comment1.params=
+comment1.target=SorteoLimitado()
+comment2.params=lim
+comment2.target=SorteoLimitado(int)
+comment3.params=limInf\ limSup
+comment3.target=SorteoLimitado(int,\ int)
+comment4.params=num
+comment4.target=int\ intentar(int)
+numComments=5

@@ -1,0 +1,27 @@
+#BlueJ package file
+objectbench.height=199
+objectbench.width=460
+package.divider.horizontal=0.6002570694087404
+package.divider.vertical=0.4325068870523416
+package.editor.height=150
+package.editor.width=644
+package.editor.x=868
+package.editor.y=355
+package.frame.height=452
+package.frame.width=800
+package.numDependencies=0
+package.numTargets=1
+package.showExtends=true
+package.showUses=true
+readme.height=58
+readme.name=@README
+readme.width=47
+readme.x=10
+readme.y=10
+target1.height=50
+target1.name=SorteoLimitado
+target1.showInterface=false
+target1.type=ClassTarget
+target1.width=140
+target1.x=230
+target1.y=20

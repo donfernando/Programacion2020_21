@@ -70,7 +70,19 @@ public class FuncionesVarias {
 		}
 		System.out.println("}");
 	}
-	
+
+	public static void println(String[] t) {
+		int i;
+		System.out.print("{");
+		if(t.length!=0) {
+			for (i = 0; i < t.length-1; i++) {
+				System.out.printf("\"%s\" , ",t[i]);
+			}
+			System.out.printf("\"%s\"",t[i]);
+		}
+		System.out.println("}");
+	}
+
 	public static void println(DocumentoDNI doc) {
 		System.out.println("-----------------------");
 		System.out.println("Nombre: "+doc.nombre);

@@ -16,9 +16,9 @@ public class Botella {
 
 	public Botella(float capacidad, float liq) {
 		if(capacidad<0.1f)
-			throw new RuntimeException("Capacidad mínima debe ser 0.1 "+unidades);
+			throw new IniBotellaException("Capacidad mínima debe ser 0.1 "+unidades);
 		if(liq<0.0f || liq>capacidad)
-			throw new RuntimeException("Esta botella solo acepta un contenido de entre 0 y "+capacidad);
+			throw new IniBotellaException("Esta botella solo acepta un contenido de entre 0 y "+capacidad);
 		this.capacidad=capacidad;
 		contenido=liq;
 		cerrada=true;
@@ -95,9 +95,10 @@ public class Botella {
 		 if (this == obj) {
 	            return true;
 	     }
-	     if (obj instanceof Botella) {
+//	     if (obj instanceof Botella) {
+		 if (getClass().equals(obj.getClass())) {
 	 		Botella laOtra = (Botella)obj;
-        	return capacidad==laOtra.capacidad && contenido==laOtra.contenido && cerrada==laOtra.cerrada;
+        	return capacidad==laOtra.capacidad && contenido==laOtra.contenido;
 	     }
 	     return false;	
 	}
