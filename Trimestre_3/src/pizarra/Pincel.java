@@ -19,7 +19,7 @@ public class Pincel {
   public static int TOP_IZQ;
   public static int TOP_DER;
 	
-  private Figura punta;
+  protected Figura punta;
   public boolean pincelActivo;
 
   public Pincel(int forma,int px,int py) {
@@ -35,9 +35,9 @@ public class Pincel {
 		break;
 	case CUADRADO: punta=new Cuadrado(px,py,20);
 		break;
-	case RECTANGULO: punta=new Rectangulo(px,py,20,40);
+	case RECTANGULO: punta=  null ; //new Rectangulo(px,py,50,30);
 		break;
-	case TRIANGULO: punta=new Triangulo(px,py,20,55,42);
+	case TRIANGULO: punta= new pizarra.figuras.nuevas.Triangulo(px,py,20,60);  //new Triangulo(px,py,20,55,42);
     }
   }
 
@@ -56,10 +56,10 @@ public class Pincel {
     cActual=g.getColor();
     g.setColor(Color.white);
 	// Cajas de informacion
-    g.fillRect(xCoord,yCoord   ,60,15);
-    g.fillRect(xCoord,yCoord+20,250,15);
-    g.fillRect(xCoord,yCoord+40,260,15);
-    g.fillRect(xCoord,yCoord+60,100,15);
+    g.fillRect(xCoord,yCoord   ,100,15);
+    g.fillRect(xCoord,yCoord+20,300,15);
+    g.fillRect(xCoord,yCoord+40,300,15);
+    g.fillRect(xCoord,yCoord+60,120,15);
     // Canal de cursores
 	g.fillRect(1,1,5,Pincel.TOP_ABJ);
 	g.fillRect(1, Pincel.TOP_ABJ-1, Pincel.TOP_DER, 3);
