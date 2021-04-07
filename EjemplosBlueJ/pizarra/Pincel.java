@@ -1,4 +1,4 @@
-package pizarra;
+ 
 
 // Pincel.java
 
@@ -18,7 +18,7 @@ public class Pincel {
   public static int TOP_ABJ;
   public static int TOP_IZQ;
   public static int TOP_DER;
-	
+    
   protected Figura punta;
   public boolean pincelActivo;
 
@@ -29,21 +29,21 @@ public class Pincel {
   public Pincel(int forma,int px,int py, boolean activo) {
     pincelActivo=activo;
     switch(forma) {
-	case CIRCULO: punta=new Circulo(px,py,20);
-		break;
-	case ELIPSE: punta=new Elipse(px,py,20,40);
-		break;
-	case CUADRADO: punta=new Cuadrado(px,py,20);
-		break;
-	case RECTANGULO: punta=  new Casita(px,py,60) ; //new Rectangulo(px,py,50,30);
-		break;
-	case TRIANGULO: punta= new pizarra.figuras.nuevas.Triangulo(px,py,20,60);  //new Triangulo(px,py,20,55,42);
+    case CIRCULO: punta=new Circulo(px,py,20);
+        break;
+    case ELIPSE: punta=new Elipse(px,py,20,40);
+        break;
+    case CUADRADO: punta=new Cuadrado(px,py,20);
+        break;
+    case RECTANGULO: punta=  new Casita(px,py,20) ; //new Rectangulo(px,py,50,30);
+        break;
+    case TRIANGULO: punta= new pizarra.figuras.nuevas.Triangulo(px,py,20,60);  //new Triangulo(px,py,20,55,42);
     }
   }
 
   public void dibujar(Graphics g) {
     if(pincelActivo) 
-		punta.dibujar(g); // no se sabe que m�todo concreto se ejecutar�.
+        punta.dibujar(g); // no se sabe que m�todo concreto se ejecutar�.
     dibujarPaneles(g,10,40);
   }
 
@@ -55,57 +55,57 @@ public class Pincel {
     yPunta=punta.posicion.y;
     cActual=g.getColor();
     g.setColor(Color.white);
-	// Cajas de informacion
+    // Cajas de informacion
     g.fillRect(xCoord,yCoord   ,100,15);
     g.fillRect(xCoord,yCoord+20,300,15);
     g.fillRect(xCoord,yCoord+40,300,15);
     g.fillRect(xCoord,yCoord+60,120,15);
     // Canal de cursores
-	g.fillRect(1,1,5,Pincel.TOP_ABJ);
-	g.fillRect(1, Pincel.TOP_ABJ-1, Pincel.TOP_DER, 3);
+    g.fillRect(1,1,5,Pincel.TOP_ABJ);
+    g.fillRect(1, Pincel.TOP_ABJ-1, Pincel.TOP_DER, 3);
     g.setColor(cActual);
-	// Cursores
-	g.fillRect(1,yPunta,5,punta.alto());
-	g.fillRect(xPunta, Pincel.TOP_ABJ-1, punta.ancho(), 3);
-	// Informacion del pincel
+    // Cursores
+    g.fillRect(1,yPunta,5,punta.alto());
+    g.fillRect(xPunta, Pincel.TOP_ABJ-1, punta.ancho(), 3);
+    // Informacion del pincel
     g.drawString("(" + xPunta + "," + yPunta +")",
-			xCoord+1,yCoord+11);
+            xCoord+1,yCoord+11);
     g.drawString("Area de la figura (punta de pincel): "+punta.area(),
-			xCoord+1,yCoord+31);
+            xCoord+1,yCoord+31);
     g.drawString("Perimetro de la figura (punta de pincel): "+punta.perimetro(),
-			xCoord+1,yCoord+51);
+            xCoord+1,yCoord+51);
     if(pincelActivo)
-	g.drawString("Pincel Apoyado", xCoord+1,yCoord+71);
+    g.drawString("Pincel Apoyado", xCoord+1,yCoord+71);
     else
-	g.drawString("Pincel Levantado", xCoord+1,yCoord+71);
+    g.drawString("Pincel Levantado", xCoord+1,yCoord+71);
   }
 
   public void arr() {
     if(punta.posicion.y > TOP_ARR)
-	punta.posicion.y -= INCREMENTO;
+    punta.posicion.y -= INCREMENTO;
     else
-	punta.posicion.y = TOP_ABJ;
+    punta.posicion.y = TOP_ABJ;
   }
 
   public void abj() {
     if(punta.posicion.y < TOP_ABJ)
-	punta.posicion.y += INCREMENTO;
+    punta.posicion.y += INCREMENTO;
     else
-	punta.posicion.y = TOP_ARR;
+    punta.posicion.y = TOP_ARR;
   }
 
   public void izq() {
     if(punta.posicion.x > TOP_IZQ)
-	punta.posicion.x -= INCREMENTO;
+    punta.posicion.x -= INCREMENTO;
     else
-	punta.posicion.x = TOP_DER;
+    punta.posicion.x = TOP_DER;
   }
 
   public void der() {
     if(punta.posicion.x < TOP_DER)
-	punta.posicion.x += INCREMENTO;
+    punta.posicion.x += INCREMENTO;
     else
-	punta.posicion.x = TOP_IZQ;
+    punta.posicion.x = TOP_IZQ;
   }
   public Point leePosicion() {
     return new Point(punta.posicion);

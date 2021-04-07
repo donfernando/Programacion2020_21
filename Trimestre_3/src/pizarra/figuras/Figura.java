@@ -12,7 +12,5 @@ public abstract class Figura {
 	abstract public int alto();
 	abstract public int ancho();
 	abstract public void dibujar(Graphics g);
-
-
 };
 

@@ -3,7 +3,7 @@ package pizarra.figuras;
 import java.awt.Graphics;
 import java.awt.Color;
 
-public class Rectangulo extends Figura {
+public class Rectangulo extends Figura implements Comparable<Rectangulo> {
 	protected int lado1, lado2;
 	public Rectangulo(int a,int b,int c,int d) {
 	  super(a,b);
@@ -19,5 +19,16 @@ public class Rectangulo extends Figura {
 	  g.setColor(Color.white);
 	  g.drawRect(posicion.x,posicion.y,lado1,lado2);
 	  g.setColor(cActual);
+	}
+	
+	
+	@Override
+	public int compareTo(Rectangulo otro) {
+		if(area()<otro.area())
+			return -1;
+		else if(area()>otro.area())
+			return 1;
+		else
+			return 0;
 	}
 };

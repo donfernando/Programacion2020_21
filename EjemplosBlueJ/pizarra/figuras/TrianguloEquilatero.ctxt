@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=TrianguloEquilatero
+comment1.params=a\ b\ y
+comment1.target=TrianguloEquilatero(int,\ int,\ int)
+comment2.params=g
+comment2.target=void\ dibujar(java.awt.Graphics)
+comment3.params=
+comment3.target=float\ area()
+comment4.params=
+comment4.target=float\ perimetro()
+comment5.params=
+comment5.target=int\ alto()
+comment6.params=
+comment6.target=int\ ancho()
+numComments=7

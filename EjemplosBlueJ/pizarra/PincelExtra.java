@@ -1,6 +1,4 @@
-package pizarra;
-
-// Pincel.java
+ia
 
 
 import java.awt.Color;
@@ -16,11 +14,11 @@ public class PincelExtra extends Pincel {
   }
 
   public PincelExtra(int forma,int px,int py, boolean activo) {
-	super(forma,px,py,activo);
+    super(forma,px,py,activo);
     switch(forma) {
-	case CIRCULO_COLOR: punta=new AroColor(px,py,30,Color.red);
-		break;
-	case AROS_OLIMPICOS: punta=new LogoOlimpico(px,py,40);
+    case CIRCULO_COLOR: punta=new AroColor(px,py,30,Color.red);
+        break;
+    case AROS_OLIMPICOS: punta=new LogoOlimpico(px,py,40);
     }
   }
 
