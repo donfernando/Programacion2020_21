@@ -1,4 +1,4 @@
-package pruebas.junit5;
+package pruebas;
 
 import pizarra.figuras.Circulo;
 import pizarra.figuras.Rectangulo;

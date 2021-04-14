@@ -29,7 +29,7 @@ Pablo Suarez:        Dado                         Borja
 Enrique:             Caja                         Cristo
 AlejandroRodriguez:  Pasajero                     Gabriel
 Kevin:               IniBotellaException
-                     Triangulo                    Guillermo
+Fco Yeray            Triangulo                    Guillermo
 
 */
 
