@@ -5,33 +5,51 @@ import interfaces.YaApiladoException;
 
 public class Pila {
 	Apilable[] datos;
-	int cima=-1;
+	int cima = -1;
+
 	public Pila(int tamax) {
-		datos=new Apilable[tamax];
+		datos = new Apilable[tamax];
 	}
+
 	public Pila() {
 		this(10);
 	}
+
 	public void apilar(Apilable dato) {
 		try {
-			if(cima<datos.length-1) {
+			if (cima < datos.length - 1) {
 				dato.apilar();
 				cima++;
-				datos[cima]=dato;
+				datos[cima] = dato;
 			}
 		} catch (YaApiladoException e) {
-		}		
+		}
 	}
+
 	public Apilable desapilar() {
-		Apilable aux;		
-		aux=datos[cima];
-		datos[cima]=null;
+		Apilable aux;
+		aux = datos[cima];
+		datos[cima] = null;
 		cima--;
 		aux.desapilar();
 		return aux;
 	}
 
 	public boolean vacia() {
-		return cima==-1;
+		return cima == -1;
 	}
+
+	@Override
+	public String toString() {
+		String s = "[";
+		int i;
+		for (i = 0; i < cima; i++) {
+			s += datos[i] + ",";
+		}
+		if (cima != -1)
+			s += datos[i];
+		s += '[';
+		return s;
+	}
+
 }

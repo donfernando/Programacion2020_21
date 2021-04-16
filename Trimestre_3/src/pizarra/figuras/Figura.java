@@ -28,6 +28,8 @@ public abstract class Figura implements Comparable<Figura>,Apilable {
 		else
 			return 0;
 	}
+	
+	
 	@Override
 	public String toString() {
 		//return String.format("%8.2f  ----   %s",area(),super.toString());
@@ -37,7 +39,7 @@ public abstract class Figura implements Comparable<Figura>,Apilable {
 	
 	
 	
-	private boolean apilado = false;
+	private boolean apilado; // = false;
 
 	public void apilar() throws YaApiladoException {
 		if(apilado)
