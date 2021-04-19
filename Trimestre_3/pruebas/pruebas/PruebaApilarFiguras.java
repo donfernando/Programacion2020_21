@@ -28,7 +28,7 @@ public class PruebaApilarFiguras {
 			System.out.println(p.desapilar());
 		System.out.println("------------------");     
 		while(!otraPila.vacia())
-			System.out.println(p.desapilar());
+			System.out.println(otraPila.desapilar());
 		     
 	}
 }

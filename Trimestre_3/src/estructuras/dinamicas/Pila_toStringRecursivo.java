@@ -4,24 +4,25 @@ package estructuras.dinamicas;
 import interfaces.Apilable;
 import interfaces.YaApiladoException;
 
-public class Pila {
+public class Pila_toStringRecursivo {
+
 	private static class Nodo{
 		Apilable dato;
 		Nodo debajo;
 	}
-	
-	private Nodo cima;  // = null;
+	private Nodo cima;   //=null;
 	
 	public void apilar(Apilable dato) {
 		Nodo nuevo;
-		try {	
-				dato.apilar();
-				nuevo = new Nodo();
-				nuevo.dato=dato;
-				nuevo.debajo=cima;
-				cima=nuevo;		
+		try {
+			dato.apilar();
+			nuevo=new Nodo();
+			nuevo.dato=dato;
+			nuevo.debajo=cima;
+			cima=nuevo;
 		} catch (YaApiladoException e) {
-		}		
+		}
+		
 	}
 	public Apilable desapilar() {
 		Apilable aux;		
@@ -36,20 +37,24 @@ public class Pila {
 	}
 	
 	
+	// implementación recursiva para terminar con el elemento de la cima.
 	@Override
 	public String toString() {
-		String s="";
+		String s;
 		Nodo i;
 		i=cima;
-		while(i != null) {
-			s = i.dato+","+ s;
-			i=i.debajo;
-		}
+		s="["+losQueQuedan(i);
 		if(!vacia())
 			s=s.substring(0, s.length()-1);
-		s='['+s+'[';
+		s+='[';
 		return s;
 	}
-	
+	private String losQueQuedan(Nodo i) {
+		String s="";
+		if(i!=null)
+//			s=i.dato+","+losQueQuedan(i.debajo);
+			s=losQueQuedan(i.debajo)+i.dato+",";
+		return s;
+	}
 	
 }
