@@ -1,5 +1,6 @@
 package estructuras.dinamicas;
 
+
 public class Cola {
 	private static class Nodo {
 		Object dato;
@@ -32,4 +33,22 @@ public class Cola {
 	public boolean vacia() {
 		return cabeza == null;
 	}
+	
+	
+	@Override
+	public String toString() {
+		String s="";
+		Nodo i;
+		i=cabeza;
+		while(i != null) {
+			s = i.dato+","+ s;
+			i=i.next;
+		}
+		if(!vacia())
+			s=s.substring(0, s.length()-1);
+		s='['+s+'}';
+		return s;
+	}
+	
+	
 }

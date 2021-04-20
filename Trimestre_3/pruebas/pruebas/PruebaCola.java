@@ -17,7 +17,7 @@ public class PruebaCola {
 		Rectangulo r2 = new Rectangulo(0, 0, 40, 10);
 		Figura c = new Circulo(0, 0, 30);
 
-		System.out.println("Pilas------------------");     
+		System.out.println("Colas------------------");     
 		System.out.println(cola);
 		
 		cola.acolar(c);
@@ -25,7 +25,7 @@ public class PruebaCola {
 		cola.acolar(r); 
 		cola.acolar(r2);
 		
-		System.out.println("Pilas------------------");     
+		System.out.println("Colas------------------");     
 		System.out.println(cola);
 	 
 

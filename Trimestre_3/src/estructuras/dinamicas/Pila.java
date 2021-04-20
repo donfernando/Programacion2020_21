@@ -6,6 +6,10 @@ import interfaces.YaApiladoException;
 
 public class Pila {
 	private static class Nodo{
+		Nodo(Apilable d, Nodo n) {
+			dato=d;
+			debajo=n;
+		}
 		Apilable dato;
 		Nodo debajo;
 	}
@@ -16,9 +20,10 @@ public class Pila {
 		Nodo nuevo;
 		try {	
 				dato.apilar();
-				nuevo = new Nodo();
-				nuevo.dato=dato;
-				nuevo.debajo=cima;
+				nuevo = new Nodo(dato,cima);
+				//nuevo = new Nodo();
+				//nuevo.dato=dato;
+				//nuevo.debajo=cima;
 				cima=nuevo;		
 		} catch (YaApiladoException e) {
 		}		

@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=ListaEnlazadaCloneable
+comment1.params=obj
+comment1.target=void\ add(java.lang.Object)
+comment2.params=
+comment2.target=void\ vaciar()
+comment3.params=
+comment3.target=java.lang.Object\ clone()
+comment4.params=
+comment4.target=java.util.Iterator\ iterator()
+numComments=5

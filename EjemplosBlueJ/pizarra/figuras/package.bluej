@@ -1,12 +1,12 @@
 #BlueJ package file
-dependency1.from=LogoOlimpico
-dependency1.to=AroColor
+dependency1.from=Casita
+dependency1.to=TrianguloEquilatero
 dependency1.type=UsesDependency
 dependency2.from=Casita
-dependency2.to=TrianguloEquilatero
+dependency2.to=Cuadrado
 dependency2.type=UsesDependency
-dependency3.from=Casita
-dependency3.to=Cuadrado
+dependency3.from=LogoOlimpico
+dependency3.to=AroColor
 dependency3.type=UsesDependency
 objectbench.height=95
 objectbench.width=693
