@@ -7,7 +7,7 @@ public class Cola {
 		Nodo next;
 	}
 
-	private Nodo cabeza;
+	private Nodo cabeza; // =null;
 	private Nodo cola;
 
 	public void acolar(Object dato) {
@@ -25,13 +25,19 @@ public class Cola {
 		Object aux;
 		aux = cabeza.dato;
 		cabeza = cabeza.next;
+		// opcional
 		if(cabeza==null)
 			cola=null;
+		
 		return aux;
 	}
 
 	public boolean vacia() {
 		return cabeza == null;
+	}
+	
+	public boolean contains(Object dato) {
+		
 	}
 	
 	

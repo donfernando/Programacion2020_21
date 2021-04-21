@@ -6,12 +6,12 @@ import interfaces.YaApiladoException;
 
 public class Pila {
 	private static class Nodo{
+		Apilable dato;
+		Nodo debajo;
 		Nodo(Apilable d, Nodo n) {
 			dato=d;
 			debajo=n;
 		}
-		Apilable dato;
-		Nodo debajo;
 	}
 	
 	private Nodo cima;  // = null;
@@ -47,6 +47,7 @@ public class Pila {
 		Nodo i;
 		i=cima;
 		while(i != null) {
+			//s = s + i.dato+",";
 			s = i.dato+","+ s;
 			i=i.debajo;
 		}
