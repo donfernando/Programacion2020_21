@@ -8,11 +8,30 @@ public class ListaEnlazada {
     private Nodo falsoNodoInicial= new Nodo();
     
     public void add(Object obj)    {
-        Nodo nuevo=new Nodo();
+        Nodo i=falsoNodoInicial;
+        Nodo nuevo;
+        
+        while(i.sig!=null)
+            i=i.sig;
+        nuevo=new Nodo();
         nuevo.dato=obj;
-        nuevo.sig=falsoNodoInicial.sig;
-        falsoNodoInicial.sig = nuevo;
+        //nuevo.sig=null;
+        i.sig = nuevo;
     }
+
+    public void add(int pos, Object obj)    
+    
+    
+    public void set(int pos, Object obj)  
+    
+    
+    public Object remove(int pos)    
+    
+    
+    public int size()
+    
+    
+    
     public void vaciar () {
         falsoNodoInicial.sig=null;
     }

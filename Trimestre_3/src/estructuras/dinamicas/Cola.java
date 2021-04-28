@@ -36,10 +36,25 @@ public class Cola {
 		return cabeza == null;
 	}
 	
-	public boolean contains(Object dato) {
-		
+/*	public boolean contains(Object dato) {
+		Nodo i=cabeza;		
+		while(i!=null && !i.dato.equals(dato))
+			i=i.next;
+		return i!=null;
 	}
-	
+*/	
+	public boolean contains(Object dato) {
+		Nodo i=cabeza;
+		boolean encontrado;
+		if(cabeza==null)
+			encontrado=false;
+		else {
+			while(i.next!=null & !i.dato.equals(dato))
+				i=i.next;
+			encontrado=i.dato.equals(dato);
+		}
+		return encontrado;
+	}
 	
 	@Override
 	public String toString() {
