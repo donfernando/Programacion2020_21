@@ -9,7 +9,7 @@ public class Carta {
 		protected Palo(int ordinal) {
 			this.ordinal=ordinal;
 		}
-		public static Palo  PICA=  new Palo(0),
+		public final static Palo  PICA=  new Palo(0),
 							TREBOL=new Palo(1),
 							DIAMANTE= new Palo(2),
 							CORAZON=  new Palo(3); 

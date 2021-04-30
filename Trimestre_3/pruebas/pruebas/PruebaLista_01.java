@@ -45,8 +45,8 @@ public class PruebaLista_01 {
 			System.out.println("Lista de acceso No directo ------------------");
 			while(i.hasNext()) {
 				f=i.next();
-				//System.out.printf("dato[%d]:%s\n",pos,f);
-				System.out.println("dato["+pos+"]:"+f);
+				System.out.printf("dato[%d]:%s\n",pos,f);
+				//System.out.println("dato["+pos+"]:"+f);
 				pos++;
 				areaTotal+=f.area();
 			}

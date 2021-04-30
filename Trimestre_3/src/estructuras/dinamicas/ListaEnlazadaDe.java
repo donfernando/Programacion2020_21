@@ -3,16 +3,16 @@ package estructuras.dinamicas;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-public class ListaEnlazada implements Iterable {
-	private static class Nodo {
-		Object dato;
+public class ListaEnlazadaDe<T> implements Iterable<T> {
+	private class Nodo {
+		T dato;
 		Nodo sig;
 	}
 
 	private Nodo falsoNodoInicial = new Nodo();
 	private int size;
 
-	public void add(Object obj) {
+	public void add(T obj) {
 		Nodo i = falsoNodoInicial;
 		Nodo nuevo;
 
@@ -25,7 +25,7 @@ public class ListaEnlazada implements Iterable {
 		size++;
 	}
 
-	public void add(int pos, Object obj) {
+	public void add(int pos, T obj) {
 		if (pos < 0 | pos > size()) {
 			throw new RuntimeException();
 		}
@@ -42,7 +42,7 @@ public class ListaEnlazada implements Iterable {
 		size++;
 	}
 
-	public void set(int pos, Object obj) {
+	public void set(int pos, T obj) {
 		if (pos < 0 | pos >= size()) {
 			throw new RuntimeException();
 		}
@@ -56,7 +56,7 @@ public class ListaEnlazada implements Iterable {
 		nodoActual.dato = obj;
 	}
 
-	public Object get(int pos) {
+	public T get(int pos) {
 		if (pos < 0 | pos >= size()) {
 			throw new RuntimeException();
 		}
@@ -70,10 +70,10 @@ public class ListaEnlazada implements Iterable {
 		return nodoActual.dato;
 	}
 
-	public Object remove(int pos) {
+	public T remove(int pos) {
 		Nodo nodoAnterior;
 		int j = 0;
-		Object aux;
+		T aux;
 
 		if (pos < 0 | pos >= size()) {
 			throw new RuntimeException();
@@ -102,7 +102,7 @@ public class ListaEnlazada implements Iterable {
 	@Override
 	public String toString() {
 		String s = "";
-		Iterator i;
+		Iterator<T> i;
 		i = iterator();
 		while (i.hasNext()) {
 			s += i.next() + ",";
@@ -119,18 +119,18 @@ public class ListaEnlazada implements Iterable {
 	 * return s; }
 	 */
 
-	public Iterator iterator() {
+	public Iterator<T> iterator() {
 		return new Desplazarse();
 	}
 
-	private class Desplazarse implements Iterator {
+	private class Desplazarse implements Iterator<T> {
 		private Nodo actual = falsoNodoInicial;
 
 		public boolean hasNext() {
 			return actual.sig != null;
 		}
 
-		public Object next() {
+		public T next() {
 			if (!hasNext())
 				throw new NoSuchElementException("No hay mas elementos en la lista.");
 			actual = actual.sig;
