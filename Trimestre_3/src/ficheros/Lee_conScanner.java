@@ -8,6 +8,8 @@ import java.util.Scanner;
 
 public class Lee_conScanner {
 	public static void main(String[] args) throws IOException {
+		
+		// ESTO NO SIRVE....
 		Scanner input = new Scanner(new File("salida.dat"));
 		int num;
 		System.out.println(input.next());

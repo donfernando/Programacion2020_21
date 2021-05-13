@@ -1,6 +1,7 @@
 package ficheros;
 
 import java.io.FileReader;
+import java.nio.charset.Charset;
 import java.util.Arrays;
 
 public class Main {
@@ -14,7 +15,7 @@ public class Main {
     
     try {
       // Creates a reader using the FileReader
-      FileReader input = new FileReader("input.txt");
+        FileReader input = new FileReader("input.txt");
 
       // Reads characters
       leidos=input.read(array);

@@ -2,6 +2,7 @@ package ficheros;
 
 import java.io.FileReader;
 import java.io.IOException;
+import java.nio.charset.Charset;
 import java.util.Arrays;
 
 public class Main2 {

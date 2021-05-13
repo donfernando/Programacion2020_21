@@ -17,13 +17,11 @@ public class Main_v2 {
       FileReader input = new FileReader("input.txt");
 
       System.out.println("Data in the file: ");
-      // Reads characters
-      leidos=input.read(array);
       System.out.print("<<");
-      while(leidos!=-1) {
+      //Lectura anticipada abreviada
+      while((leidos=input.read(array))!=-1) {
           fr=new String(array,0,leidos);
           System.out.print(fr);
-          leidos=input.read(array);
       }
       System.out.println(">>");
 
