@@ -7,7 +7,8 @@ import java.io.IOException;
 public class EscribeFloats {
 	public static void main(String[] args) throws IOException {
 		
-		FileOutputStream fo=new FileOutputStream("numeros.dat",true);
+		FileOutputStream fo=new FileOutputStream("numeros.dat");
+		//FileOutputStream fo=new FileOutputStream("numeros.dat",true);
 		DataOutputStream dos=new DataOutputStream(fo); 
 		dos.writeFloat(12.67f);
 		dos.writeFloat(12.67f);
@@ -16,5 +17,6 @@ public class EscribeFloats {
 	
 		dos.close();
 		fo.close();		
+		
 	}
 }

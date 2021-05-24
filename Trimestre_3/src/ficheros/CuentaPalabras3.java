@@ -1,9 +1,8 @@
 package ficheros;
 
 import java.io.FileReader;
-import java.io.StringReader;
 
-public class CuentaPalabras2 {
+public class CuentaPalabras3 {
 
 	public static void main(String[] args) {
 		char[] datos= new char[100]; 
@@ -13,9 +12,8 @@ public class CuentaPalabras2 {
 		int charLeidos;
 
 		try {
-			//FileReader entrada = new FileReader("input.txt");
-			StringReader entrada = new StringReader("input.txt");
-			charLeidos = entrada.read(datos);
+			FileReader frase = new FileReader("input.txt");
+			charLeidos = frase.read(datos);
 			System.out.println("Data in the file:");
 			while (charLeidos!=-1) {
 				for (pos = 0; pos < charLeidos; pos++) {
@@ -24,10 +22,10 @@ public class CuentaPalabras2 {
 						contPalabras++;
 					antCaracter = datos[pos];
 				}
-				charLeidos = entrada.read(datos);
+				charLeidos = frase.read(datos);
 			}
 			System.out.println("\n---> Hay " + contPalabras + " palabras en el fichero");
-			entrada.close();
+			frase.close();
 		} catch (Exception e) {
 			e.getStackTrace();
 		}

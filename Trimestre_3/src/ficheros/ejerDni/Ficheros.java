@@ -13,7 +13,11 @@ public class Ficheros {
 	/* private Ficheros() {
 	   }
 	*/
-	
+
+	public static void guardar(Iterator<Carnet> i, String nFich) {		
+		guardar(i, nFich,false);
+	}
+
 	public static void guardar(Iterator<Carnet> i, String nFich, boolean añade) {		
 		try {
 			FileOutputStream fo = new FileOutputStream(nFich,añade);

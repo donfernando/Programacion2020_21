@@ -15,7 +15,7 @@ public class Carnet {
 
 	@Override
 	public String toString() {
-		return String.format("Dni[%s / %d-%c / %f]",nombre,numero,letra,altura);		
+		return String.format("Dni[%s / %d-%c / %.2f]",nombre,numero,letra,altura);		
 	}
 	public String getNombre() {
 		return nombre;
