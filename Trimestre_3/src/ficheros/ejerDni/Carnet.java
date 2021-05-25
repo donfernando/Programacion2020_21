@@ -1,6 +1,11 @@
 package ficheros.ejerDni;
 
-public class Carnet {
+import java.io.Serializable;
+
+public class Carnet implements Serializable {
+
+	private static final long serialVersionUID = 2L;
+	
 	private String nombre;
 	private long numero;
 	private char letra;
