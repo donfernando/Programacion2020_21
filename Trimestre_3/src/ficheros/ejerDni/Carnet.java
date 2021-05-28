@@ -10,7 +10,8 @@ public class Carnet implements Serializable {
 	private long numero;
 	private char letra;
 	private float altura;
-
+	
+	
 	public Carnet(String nombre,long numero,char letra,float altura) {
 		this.nombre=nombre;
 		this.numero=numero;

@@ -15,7 +15,7 @@ public class PruebaFicherosEscribeDNI {
 		l.add(new Carnet("Julio Iglesias",277543L,'A',1.35f));
 
 		Iterator<Carnet> i=l.iterator();
-		i.next();
+		//i.next();
 		Ficheros.guardar( i , "listaDNIs.dat");
 	}
 }

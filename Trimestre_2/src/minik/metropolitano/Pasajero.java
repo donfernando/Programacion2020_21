@@ -3,6 +3,7 @@ package minik.metropolitano;
 import java.util.ArrayList;
 
 public class Pasajero {
+	
     private String nombre;
     private static ArrayList<String> nombresYaUsados;
     boolean estaDentro;

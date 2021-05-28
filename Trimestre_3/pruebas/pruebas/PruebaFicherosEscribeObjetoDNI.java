@@ -25,7 +25,10 @@ public class PruebaFicherosEscribeObjetoDNI {
 		oos.writeInt(l.size());
 		while(i.hasNext())
 			oos.writeObject(i.next());
-		
+
+		//oos.writeObject(l);
+
+	
 		oos.close();
 		fos.close();
 	}
